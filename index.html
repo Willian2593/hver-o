@@ -1,0 +1,53 @@
+<HTMl:5>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilo.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
+    
+   
+    <title>Gerador de senha Webposto Pay</title>
+</head>
+
+<body>
+    <h1>Gerador de senha Webposto Pay</h1>
+    
+    
+    <div class="card-body">
+        <textarea id="textArea" hidden > </textarea>
+        <a type="button" class="btn btn-primary btn-lg" onclick="copyToClipBoard()" id="btn1" > 
+            <script> 
+            
+            var ndata = new Date
+            var dia = ndata.getDate();
+            var mes = ndata.getMonth()+1;
+            var ano = ndata.getFullYear();
+            var hora = ndata.getHours();
+            var gmt = 3
+            var senha = ano-mes-dia-hora-gmt
+
+ document.getElementById("textArea").innerHTML = senha
+ document.getElementById("btn1").innerHTML = senha
+
+function copyToClipBoard() {
+    navigator.clipboard.writeText(senha);
+    alert("copiado a senha!"); 
+    }
+            
+            
+            </script>
+        
+        </a>    
+    </div>
+
+  
+    
+   <a href="https://github.com/Willian2593" id="btn" target="_blank">© Willian Ferreira</a>
+        
+    
+</body>
+</html>
+</HTMl:5>
